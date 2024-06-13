@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+
+
+
+/*
+   CIS 155 - Web Dev 1 - Quarter Project - V1 Style Sheet
+   Author: Tracy Harvey
+   Date:  04/29/20
+   
+   Filename: styles.css
+
+   M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times,
+   show one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements) : 
+   I did not include an example of using Pseudo-Elements as my page at this point has a small
+   amount of content and I could not identify a place for it that made sense.
+
+   Colors that are marked in any kind of rgb or hsl were generated from the site:
+     https://rgbcolorcode.com/color/660000
+*/
+
+/* Structural Styles */
+html {
+    background-color: black; 
+}
+/* M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS) : there are many examples
+   of applying colors using CSS in this document.
+*/
+/* M2LO14 Demonstrate and explain the use of progressive enhancement in CSS (CSS, see 2-6 
+   Employing Progressive Enhancement) : by putting in both an rgb value and and hsl value we insure
+   that older browsers can still display the color as intended as hsl was introduced in CSS3
+*/
+header {
+    background-color: rgb(102, 0, 0);
+    color: rgb(227, 226, 202);
+    color: hsl(58, 31%, 84%);
+}
+/* M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified
+   2 times, once where precedence is applied and once where inheritance is applied : This is an
+   example of style inheritance everything that appears in the HTML body will have a set background
+   color and it's text will be black
+*/
+body {
+    background-color: rgb(227, 226, 202);
+    background-color: hsl(58, 31%, 84%);
+    color: black;
+    margin: 10px;
+}
+/* M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different
+   types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) : 
+   This is an example of the element selector, it selects the footer element and changes the background 
+   and text color from what the CSS for the body and html elements have listed
+*/   
+footer {
+    background-color: rgb(207, 109, 52);
+    color: rgb(227, 226, 202);
+    color: hsl(58, 31%, 84%);
+}
+/* M2LO7 Demonstrate a CSS attribute selector other than class or id
+   (CSS, specify 1 time, see 2-9b Attribute selectors) : gives the font style Italic to any hypertext 
+   element that contains the href attribute
+*/
+a[href] {
+    font-style: italic;
+}
+
+/* Navigation Styles */
+/* M2LO12 Demonstrate how CSS can change presentation of page elements 
+   (CSS, these are styles that impact page elements rather than impacting text on the page) :
+   Forces the Nav section to display as a table instead of the default, which on chrome was an unordered list
+*/
+nav {
+    display: table;
+    width: 100%;
+}
+nav > ul {
+    display: table-row;
+}
+nav > ul > li {
+    display: table-cell;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+}
+nav a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+nav a:link, nav:visited {
+    color: black;
+    text-decoration: none;
+}
+/* M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times, show 
+   one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements) : 
+   Controls the text color and background color of the menu items when the mouse hovers over them
+*/
+nav a:hover, nav a:active {
+    color: rgb(227, 226, 202);
+    color: hsl(58, 31%, 84%);
+    background-color: rgb(102, 0, 0);
+}
+
+
+/* sec styles */
+/* M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified
+   2 times, once where precedence is applied and once where inheritance is applied : This is an
+   example of style precedence as the articles are usually located in the HTML body this supercedes 
+   the body back ground color with tan 
+*/
+article {
+    background-color: tan;
+}
+/* M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different 
+   types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) :
+   This is an example of the parent > child selector where article is the parent and h1 is the child
+   and the underline will be applied to all h1 elements with in any article
+*/
+article > h1 {
+    text-decoration: underline;
+}
+/* M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles 
+   that impact text that is rendered on the page) : This shows the use of CSS to change the type of 
+   font, size and alignment on this webpage
+/* M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, 
+   show a use of id and a use of class, see 2-9b Attribute selectors) : This shows the use of an id
+   selector in where font family, size, style and alignment are changed from the page default
+*/
+#info {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+}
+#info_welcome {
+    text-align: center;
+}
+/* M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, 
+   show a use of id and a use of class, see 2-9b Attribute selectors) : This shows the use of a class
+   selector in font family, size, and style are changed from the page default
+*/
+ol.log_data {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+}
+
+
+/* List Styles */
+ul {
+
+}
+ol {
+
+}
